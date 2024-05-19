@@ -1,0 +1,17 @@
+# Currency Exchange Service
+
+This service provides an API to get the current USD to UAH exchange rate and to subscribe to email notifications about the exchange rate.
+
+## API Endpoints
+
+### GET /api/rate
+Returns the current USD to UAH exchange rate.
+
+### POST /api/subscribe
+Subscribes an email address to daily notifications about the exchange rate.
+
+Request body:
+```json
+{
+    "email": "example@example.com"
+}
