@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from models import Subscription, db
 from services.exchange_rate_service import get_current_rate
+from services.email_service import send_email
 
 bp = Blueprint('routes', __name__)
 
@@ -17,5 +18,7 @@ def subscribe():
 
 @bp.route('/api/rate', methods=['GET'])
 def rate():
-    rate = get_current_rate()
-    return jsonify({'rate': rate}), 200
+    c_rate = get_current_rate()
+    return jsonify({'rate': c_rate}), 200
+
+

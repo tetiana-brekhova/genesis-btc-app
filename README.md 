@@ -1,17 +1,19 @@
 # Currency Exchange Service
 
-This service provides an API to get the current USD to UAH exchange rate and to subscribe to email notifications about the exchange rate.
+This service provides an API to get the current USD to UAH exchange rate
+and to subscribe to email notifications about the exchange rate.
 
 ## API Endpoints
 
-### GET /api/rate
+### GET http://127.0.0.1:5000/api/rate
 Returns the current USD to UAH exchange rate.
 
-### POST /api/subscribe
+### POST http://127.0.0.1:5000/api/subscribe
 Subscribes an email address to daily notifications about the exchange rate.
 
-Request body:
-```json
-{
-    "email": "example@example.com"
-}
+## In config.py  you need to insert  corect values in class Config.
+
+You can use the test OPENEXCHANGERATES_API_KEY = "dacee103637befefa0104478"
+or create your own at https://app.exchangerate-api.com/dashboard/confirmed.
+## RUN
+```  docker compose up --build ```

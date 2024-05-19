@@ -3,7 +3,7 @@ import os
 class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql://user:password@db:5432/currency_exchange')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    OPENEXCHANGERATES_API_KEY = os.getenv('OPENEXCHANGERATES_API_KEY', 'your_open_exchange_rates_api_key')
+    OPENEXCHANGERATES_API_KEY = os.getenv('OPENEXCHANGERATES_API_KEY', 'dacee103637befefa0104478')
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
